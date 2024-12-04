@@ -9,10 +9,6 @@ import { DataTableViewOptions } from "./data-table-view-options";
 
 import { DataTableFacetedFilter } from "./data-table-faceted-filter";
 import React, { useEffect, useState } from "react";
-// import {Query} from "appwrite";
-
-import Link from "next/link";
-import { Plus } from "lucide-react";
 
 export interface DataTableToolbarProps<TData> {
   table: Table<TData>;
@@ -73,6 +69,7 @@ export function DataTableToolbar<TData>({
             // value={(filters != null && filters.hasOwnProperty(searchFilter.accessorKey) ? filters[searchFilter.accessorKey] : "")
             // }
             onChange={(event) => {
+              console.log(event);
               // const key = searchFilter?.accessorKey;
               // const value = event.target.value;
               // if (setNewFilters) {
